@@ -25,7 +25,7 @@ SECRET_KEY = '23nn2@8cog33-4)xw(s^$0!4i+vfqph_c%a*4gk6&05t2kg!nz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['http://raklane.pythonanywhere.com/','raklane.pythonanywhere.com']
 
 
 # Application definition
@@ -120,6 +120,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'static'
 
 MEDIA_URL = '/media/'
 
