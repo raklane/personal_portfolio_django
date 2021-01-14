@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '23nn2@8cog33-4)xw(s^$0!4i+vfqph_c%a*4gk6&05t2kg!nz'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['http://raklane.pythonanywhere.com/','raklane.pythonanywhere.com']
+ALLOWED_HOSTS = ['raklane.pythonanywhere.com']
 
 
 # Application definition
@@ -125,3 +125,8 @@ STATIC_ROOT = BASE_DIR / 'static'
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = BASE_DIR / 'media'
+
+try:
+    from .local_settings import *
+except ImportError:
+    print('Looks like no local file. You must be on production')
